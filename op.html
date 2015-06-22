@@ -18,16 +18,18 @@
     </section>
 
     <section class="main-content">
-        <h1>Overplayed list</h1>
+        <h1>Overplayed / NSFW / Banned list</h1>
 
         <script>
         $(document).ready(function () {
-            $.getJSON('https://rawgit.com/SirLydian/LarrieTheBot-customization/master/blacklists/OPlist.json', function (json) {
+            $.getJSON('https://rawgit.com/SirLydian/LarrieTheBot-customization/master/blacklists/NSFWlist.json', function (json) {
                 var tr;
                 for (var i = 0; i < json.length; i++) {
                     tr = $('<tr/>');
                     tr.append('<td>' + json[i].author + '</td>');
                     tr.append('<td>' + json[i].title + '</td>');
+                    tr.append('<td>' + json[i].mid + '</td>');
+                    tr.append('<td>' + json[i].type + '</td>');
                     $('#table1').append(tr);
                 }
             });
@@ -39,6 +41,8 @@
                 <tr>
                     <th>Author</th>
                     <th>Title</th>
+                    <th>Mid</th>
+                    <th>Type</th>
                 </tr>
             </thead>
             <tbody>
