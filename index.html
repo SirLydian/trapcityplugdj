@@ -27,13 +27,13 @@
                 tr = $('<tr/>');
                 tr.append('<td>' + json[i].author + '</td>');
                 tr.append('<td>' + json[i].title + '</td>');
-                $('table1').append(tr);
+                $('#table1').append(tr);
             }
         });
     });
     </script>
 
-    <table1>
+    <table id="table1">
         <thead>
             <tr>
                 <th>Author</th>
@@ -54,13 +54,13 @@
                 tr = $('<tr/>');
                 tr.append('<td>' + json[i].author + '</td>');
                 tr.append('<td>' + json[i].title + '</td>');
-                $('table2').append(tr);
+                $('#table2').append(tr);
             }
         });
     });
     </script>
 
-    <table2>
+    <table id="table2">
         <thead>
             <tr>
                 <th>Author</th>
