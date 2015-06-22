@@ -18,6 +18,31 @@
     <section class="main-content">
     <h1>Overplayed and NSFW list</h1>
 
+    <script>
+    $(document).ready(function () {
+        $.getJSON('https://rawgit.com/SirLydian/LarrieTheBot-customization/master/blacklists/ExampleOPlist.json', function (json) {
+            var tr;
+            for (var i = 0; i < json.length; i++) {
+                tr = $('<tr/>');
+                tr.append('<td>' + json[i].author + '</td>');
+                tr.append('<td>' + json[i].title + '</td>');
+                $('table').append(tr);
+            }
+        });
+    });
+    </script>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Author</th>
+                <th>Title</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/SirLydian/trapcityplugdj">TrapCity PlugDJ</a> is maintained by <a href="https://github.com/SirLydian">SirLydian</a>.</span>
 
