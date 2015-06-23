@@ -31,7 +31,9 @@
                     tr = $('<tr/>');
                     tr.append('<td>' + json[i].author + '</td>');
                     tr.append('<td>' + json[i].title + '</td>');
-                    tr.append('<td>' + json[i].mid + '</td>');
+                    var str = json[i].mid;
+                    var res = str.substr(2, 12);
+                    tr.append('<td>' + res + '</td>');
                     tr.append('<td>' + json[i].type + '</td>');
                     $('#table1').append(tr);
                 }
